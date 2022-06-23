@@ -31,3 +31,23 @@ Student.prototype.approveCourse = function (newCourse) {
 const luis = new Student("Luis", 20, ["Introduction to graphic design"]);
 
 console.log(luis);
+
+// Prototype with class syntax
+class Student2 {
+  constructor({ name, age, coursesApproved = [] }) {
+    // Attributes
+    this.name = name;
+    this.age = age;
+    this.coursesApproved = coursesApproved;
+  }
+  // Methods
+
+  // New course approved
+  approveCourse(newCourse) {
+    this.coursesApproved.push(newCourse);
+  }
+}
+
+const itzel = new Student2({ name: "Itzel", age: 22, coursesApproved: [] });
+itzel.approveCourse("Child psychology");
+console.log(itzel);
